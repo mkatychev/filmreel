@@ -122,6 +122,6 @@ user_reel
 
 ## filmReel concepts:
 
-* [The frame](frame.md)
+* [The Frame](frame.md)
 * [The Reel](Reel.md)
-* [The cut](cut.md)
+* [The Cut](cut.md)

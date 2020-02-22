@@ -1,4 +1,4 @@
-# The cut
+# The Cut
 
 [From Wikipedia](https://en.wikipedia.org/wiki/Director%27s_cut):
 > Traditionally, the "director's cut" is not, by definition, the director's ideal or preferred cut. The editing process of a film is broken into stages:
@@ -51,6 +51,11 @@ A *Cut* allows data to be stored and propagated to Frames in a *Reel* sequence u
 ```json
 {
   "protocol": "HTTP",
+  "cut": {
+    "from": [
+      "USER_ID"
+    ]
+  },
   "request": {
     "body": {},
     "uri": "POST /logout/${USER_ID}"
@@ -98,7 +103,7 @@ A *Cut* allows data to be stored and propagated to Frames in a *Reel* sequence u
 }
 ```
 
-**Listing 3:** When interpreting the Frame file above, the *request uri* value will be processed as `"POST /logout/${USER_ID}"` due to the escaped dollar sign.
+**Listing 3:** When interpreting the Frame file above, the *request uri* value will be processed as `"POST /logout/${USER_ID}"` due to the escaped left delimiter.
 
 ## Cut Errors
 
@@ -151,6 +156,6 @@ A *Cut* allows data to be stored and propagated to Frames in a *Reel* sequence u
 
 ## filmReel concepts:
 
-* [The frame](frame.md)
+* [The Frame](frame.md)
 * [The Reel](Reel.md)
-* [The cut](cut.md)
+* [The Cut](cut.md)

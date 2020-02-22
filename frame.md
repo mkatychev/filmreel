@@ -45,7 +45,7 @@ A Frame must provide a string value for the `"protocol"` key indicating the type
 <a name="request"></a>
 
 `Request` - A [JSON object](https://en.wikipedia.org/wiki/JSON#Data_types_and_syntax) that fully defines how the *Frame* payload is built and sent.
-* A request's `"uri"` key must contain a string value specifying a fully formed [request URI](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1.2) for the protocol defined.
+* A request's `"uri"` key must map to a string value specifying a fully formed [request URI](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1.2) for the protocol defined.
 * Must contain a *body* object even if no body data is to be sent. If no [cut `${VARIABLES}`](cut.md#cut-variable) are specified in the body then the payload will be sent as-is.
 
 <a name="listing-2"></a>
@@ -68,7 +68,7 @@ A Frame must provide a string value for the `"protocol"` key indicating the type
 }
 ```
 
-**Listing 2:** An example *Frame* that logs a user out using a templated uri
+**Listing 2:** An example *Frame* that maps the request URI to an HTTP method and endpoint.
 
 
 <a name="response"></a>
@@ -132,6 +132,6 @@ A Frame must provide a string value for the `"protocol"` key indicating the type
 
 ## filmReel concepts:
 
-* [The frame](frame.md)
+* [The Frame](frame.md)
 * [The Reel](Reel.md)
-* [The cut](cut.md)
+* [The Cut](cut.md)
