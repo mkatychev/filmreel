@@ -21,17 +21,17 @@ The directory shown below holds the Frames needed to create a fully populated "U
 
 ```
 user_reel
-├── 01e.usr.createuser.fr.json
-├── 01s.usr.createuser.fr.json
-├── 01se.usr.createuser.fr.json
-├── 02s.usr.changeaddress.fr.json
-├── 03s.usr.changebirthdate.fr.json
-├── 04s.usr.changebirthlocation.fr.json
-├── 06e.usr.changeemail.fr.json
-├── 06s.usr.changeemail.fr.json
-├── 07s.usr.confrimemail.fr.json
-├── 08s.usr.changename.fr.json
-└── 09s.usr.getuser.fr.json
+├── usr.01e.createuser.fr.json
+├── usr.01s.createuser.fr.json
+├── usr.01se.createuser.fr.json
+├── usr.02s.changeaddress.fr.json
+├── usr.03s.changebirthdate.fr.json
+├── usr.04s.changebirthlocation.fr.json
+├── usr.06e.changeemail.fr.json
+├── usr.06s.changeemail.fr.json
+├── usr.07s.confrimemail.fr.json
+├── usr.08s.changename.fr.json
+└── usr.09s.getuser.fr.json
 ```
 
 **Listing 1:** An example *Reel* in the `user_reel` directory. The *Reel* sequence indicates the steps taken to eventually return a representation of a "User" object in the final state.
@@ -40,12 +40,12 @@ user_reel
 <a name="listing-2"></a>
 
 ```
-┌─────────── Sequence number        // 01
-│ ┌───────── Frame type             // se
-│ │  ┌────── Reel name              // usr
-│ │  │   ┌─  Method name            // createuser
-▼ ▼  ▼   ▼
-01se.usr.createuser.fr.json
+┌─────────── Reel name              // usr
+│   ┌─────── Sequence number        // 01
+│   │ ┌───── Return type            // se
+│   │ │  ┌── Command name           // createuser
+▼   ▼ ▼  ▼
+usr.01se.createuser.fr.json
                     ▲
                     └─ Frame suffix // .fr.json
 ```
@@ -62,9 +62,9 @@ user_reel
 
   ```
   user_reel
-  ├── 01e_1.usr.createuser.fr.json // no first name
-  ├── 01e_2.usr.createuser.fr.json // no email
-  └── 01s.usr.createuser.fr.json   // user created successfully
+  ├── usr.01e_1.createuser.fr.json // no first name
+  ├── usr.01e_2.createuser.fr.json // no email
+  └── usr.01s.createuser.fr.json   // user created successfully
   ```
   **Listing 3**: A *sequence number* with more than one `Error Frame`.
 
@@ -104,9 +104,9 @@ user_reel
 <a name="listing-5"></a>
 
   ```
-  01se.usr.createuser.fr.json
+  usr.01se.createuser.fr.json
   └──────┤
-         └─ Reel prefix // 01se.usr
+         └─ Reel prefix // usr.01se
   ```
 
   **Listing 5**: Deleniation of a *Frame* file's *Reel prefix*.
