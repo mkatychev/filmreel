@@ -29,7 +29,7 @@ user_reel
 ├── usr.04s.changebirthlocation.fr.json
 ├── usr.06e.changeemail.fr.json
 ├── usr.06s.changeemail.fr.json
-├── usr.07s.confrimemail.fr.json
+├── usr.07s.confirmemail.fr.json
 ├── usr.08s.changename.fr.json
 └── usr.09s.getuser.fr.json
 ```
@@ -42,7 +42,7 @@ user_reel
 ```
 ┌─────────── Reel name              // usr
 │   ┌─────── Sequence number        // 01
-│   │ ┌───── Return type            // se
+│   │ ┌───── Frame type             // se
 │   │ │  ┌── Command name           // createuser
 ▼   ▼ ▼  ▼
 usr.01se.createuser.fr.json
@@ -56,7 +56,7 @@ usr.01se.createuser.fr.json
 `Sequence number` - a number representing a particular step in an object's state transition:
 
 * The presence of a Frame does not necessarily allude to a state transition. Most `Error Frame`s, for example, do not modify state.
-* A sequence number must be a whole number unless there are multiple `Frame type`s associated with a particular sequence number, then the sequence number must be suffized with a decimal value delimited by an underscore:
+* A sequence number must be a whole number unless there are multiple `Frame type`s associated with a particular sequence number, then the sequence number must be suffixed with a decimal value delimited by an underscore:
 
 <a name="listing-3"></a>
 
@@ -109,7 +109,7 @@ usr.01se.createuser.fr.json
          └─ Reel prefix // usr.01se
   ```
 
-  **Listing 5**: Deleniation of a *Frame* file's *Reel prefix*.
+  **Listing 5**: Delineation of a *Frame* file's *Reel prefix*.
 
 * Fully represents a Frame's relative placement in a *Reel* sequence.
 

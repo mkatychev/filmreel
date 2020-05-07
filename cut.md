@@ -21,7 +21,7 @@ A *Cut* allows data to be stored and propagated to Frames in a *Reel* sequence u
 
 `Cut Register` - The JSON object stored in the *Cut* file.
 * Is a flat [associative array](https://en.wikipedia.org/wiki/Associative_array).
-* Holds *Cut Variables* and their corresonding values stored in a series of key/value pairs.
+* Holds *Cut Variables* and their corresponding values stored in a series of key/value pairs.
 
 <a name="listing-1"></a>
 
@@ -42,8 +42,8 @@ A *Cut* allows data to be stored and propagated to Frames in a *Reel* sequence u
 * Cut Variables referenced in a Frame's request/response bodies must be : 
   * prepended with a left delimiter - `${` 
   * and terminated with a right delimiter - `}`.
-* Ex: The Cut Variable `USER_ID` found in the Cut Register will be referenced as-is in a Frame's Cut instruciton set and as `${USER_ID}` in the request/response objects.
-* Mimics [shell parameter exmansion](https://ss64.com/bash/syntax-expand.html) syntax.
+* Ex: The Cut Variable `USER_ID` found in the Cut Register will be referenced as-is in a Frame's Cut instruction set and as `${USER_ID}` in the request/response objects.
+* Mimics [shell parameter expansion](https://ss64.com/bash/syntax-expand.html) syntax.
 * The left delimiter can be escaped by placing two backslashes before the dollar sign: `\\$`.
 
 <a name="listing-2"></a>
@@ -78,7 +78,7 @@ A *Cut* allows data to be stored and propagated to Frames in a *Reel* sequence u
 
 <a name="read-operation"></a>
 `Read operation` - A Cut operation that uses a *read instruction* to insert a *Cut Variable* into a *Frame's* *request/response* objects
-* Uses the read instructions held in a Cut Instruction Set to populate Cut Variable refrences found in a Frame.
+* Uses the read instructions held in a Cut Instruction Set to populate Cut Variable references found in a Frame.
 * Executed *before* a Frame' request payload is sent.
 
 <a name="write-operation"></a>
@@ -113,10 +113,10 @@ A *Cut* allows data to be stored and propagated to Frames in a *Reel* sequence u
 
 `Frame Parse Error` - returned when:
 
-* A Frame string contains a dollar sign and open brace `${` that is not later follwed by a matching close brace `}`.
+* A Frame string contains a dollar sign and open brace `${` that is not later followed by a matching close brace `}`.
 * A Frame's request/response objects hold Cut Variable references not found in the Cut Instruction Set.
-* The `"from"` key in a Frame instruciton set does not map to an array of strings.
-* The `"to"` key in a Frame instruciton set does not map to an associative array of strings.
+* The `"from"` key in a Frame instruction set does not map to an array of strings.
+* The `"to"` key in a Frame instruction set does not map to an associative array of strings.
 
 `General Instruction Error` - returned when:
 * A Cut instruction fails to return a string holding the equivalent Cut Variable reference.
