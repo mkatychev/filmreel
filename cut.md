@@ -13,15 +13,15 @@ A *Cut* allows data to be stored and propagated to Frames in a *Reel* sequence u
 
 <a name="cut"></a>
 
-`Cut` - a JSON file starting with a [*Reel name*](Reel.md#reel-name) and ending with the suffix `.cut.json`.
+`Cut File` - a JSON file starting with a [*Reel name*](Reel.md#reel-name) and ending with the suffix `.cut.json`.
 * Ex: For a Reel with a name of `product`, the associated Cut file will be named `product.cut.json`.
 * Holds a single *Cut Register* object.
 
 <a name="cut-register"></a>
 
 `Cut Register` - The JSON object stored in the *Cut* file.
-* Is a flat [associative array](https://en.wikipedia.org/wiki/Associative_array).
-* Holds *Cut Variables* and their corresponding values stored in a series of key/value pairs.
+* Is an [associative array](https://en.wikipedia.org/wiki/Associative_array) containing valid JSON objects.
+* Holds *Cut Variables* and their corresonding values stored in a series of key/value pairs.
 
 <a name="listing-1"></a>
 
@@ -39,8 +39,8 @@ A *Cut* allows data to be stored and propagated to Frames in a *Reel* sequence u
 
 `Cut Variable`- a named variable that references a single string value in the *Cut Register*.
 
-* Cut Variables referenced in a Frame's request/response bodies must be : 
-  * prepended with a left delimiter - `${` 
+* Cut Variables referenced in a Frame's request/response bodies must be :
+  * prepended with a left delimiter - `${`
   * and terminated with a right delimiter - `}`.
 * Ex: The Cut Variable `USER_ID` found in the Cut Register will be referenced as-is in a Frame's Cut instruction set and as `${USER_ID}` in the request/response objects.
 * Mimics [shell parameter expansion](https://ss64.com/bash/syntax-expand.html) syntax.
