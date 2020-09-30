@@ -63,7 +63,7 @@ A *Cut Variable* can store any valid JSON object:
 
 ## Retry attempts:
 
-* added retry `attempts` to frame requests: `{"request":{"attempts": {"times": 5, "ms": 500}}}`
+* retry `attempts` are held in the `request` object: `{"request":{"attempts": {"times": 5, "ms": 500}}}`
 
 This *Frame* will try up to 5 times to get a correct response match before terminating with an error, waiting 500 miliseconds or half a second between requests:
 
@@ -92,10 +92,10 @@ This *Frame* will try up to 5 times to get a correct response match before termi
 }
 ```
 
-## Hideen variables
+## Hidden variables
 Any variable with a leading underscore should not show up in any stdout or file output: `${_VARIABLE_NAME}`
 
 ## Ignoring variables
-Variables containing only lowercase letters will be discraded from the *Cut Register* upon a successful *Frame* take: `${lowercase}` and not carry over into following frames. This is meant to decrease noise in the *Cut Register* and signal the relevance or lack of for a particular response.
+Variables containing only lowercase letters will be discarded\ from the *Cut Register* upon a successful *Frame* take: `${lowercase}` and not carry over into following frames. This is meant to decrease noise in the *Cut Register* and signal the relevance or lack of for a particular response.
 
 * Lowercase variables can be combined with a leading underscore to ignore a variable and hide it from any output: `${_hidden_and_ignored}` 

@@ -1,11 +1,11 @@
 ## Implementation Cases TODO:
 
 * Detecting API documentation examples that no longer reflect the true behaviour of a service.
-* http://acid3.acidtests.org/ (simiar to this, provide edge cases for implementation unit tests)
+* http://acid3.acidtests.org/ (similar to this, provide edge cases for implementation unit tests)
 
 ## Cut
 * Upon the start of a reel flow, the cut file is copied to a hidden file with a `.` prepended to the name:  `.some_reel_name.cut.json`
-* One must manually add values written to the *carbon coppy* to prevent committing sensitive information.  (should this be further elaborated?)
+* One must manually add values written to the *carbon copy* to prevent committing sensitive information.  (should this be further elaborated?)
 
 <a name="listing-3"></a>
 
