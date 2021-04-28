@@ -48,8 +48,7 @@ bodies.
 
 <a name="request"></a>
 
-`Request` - A [JSON
-object](https://en.wikipedia.org/wiki/JSON#Data_types_and_syntax) that fully
+`Request` - A [JSON object](https://en.wikipedia.org/wiki/JSON#Data_types_and_syntax) that fully
 defines how the *Frame* payload is built and sent.
 * A request's `"uri"` key must map to a string value specifying a fully formed
 [request URI](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1.2)
@@ -107,15 +106,14 @@ response message.
 ```
 
 **Listing 3:** A *Frame* file that expects an error message in the response
-body and a ["Not
-Found"](https://github.com/grpc/grpc/blob/master/doc/statuscodes.md) status
-code in the response status.
+body and a ["Not Found"](https://github.com/grpc/grpc/blob/master/doc/statuscodes.md)
+status code in the response status.
 
 <a name="cut-instruction-set"></a>
 
 `Cut Instruction Set` - A JSON object holding Read and Write instructions that
-push and pull variables `"from"` and `"to"` the *Cut Register* through [*Cut
-operations*](cut.md#cut-operation).
+push and pull variables `"from"` and `"to"` the *Cut Register* through
+[*Cut operations*](cut.md#cut-operation).
 
 * Must contain one or both of these key names: `"from"` and `"to"`.
 * The `"from"` key holds an array of `Read instructions`.

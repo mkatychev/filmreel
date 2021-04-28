@@ -82,9 +82,9 @@ dollar sign: `\\$`.
 
 <a name="cut-operation"></a>
 
-`Cut operation` - A procedure that uses instructions held in a Frame's [*Cut
-Instruction Set*](frame.md#cut-instruction-set) to read and write *Cut
-Variables* to the *Cut Register*.
+`Cut operation` - A procedure that uses instructions held in a Frame's
+[*Cut Instruction Set*](frame.md#cut-instruction-set) to read and write
+*Cut Variables* to the *Cut Register*.
 <a name="from-to"></a>
 * Reads `"from"` and writes `"to"` the *Cut Register* .
 
