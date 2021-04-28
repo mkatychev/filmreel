@@ -2,7 +2,9 @@
 
 * retry `attempts` are held in the `request` object: `{"request":{"attempts": {"times": 5, "ms": 500}}}`
 
-This *Frame* will try up to 5 times to get a correct response match before terminating with an error, waiting 500 miliseconds or half a second between requests:
+This *Frame* will try up to 5 times to get a correct response match before
+terminating with an error, waiting 500 miliseconds or half a second between
+requests:
 
 ```json
 {

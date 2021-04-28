@@ -2,7 +2,9 @@
 
 ## Encoding input/output expectations into a JSON file
 
-A *Frame* provides the means for demonstrating how an API method should behave. Once a Frame request object is turned into a payload and sent, the returning payload is then compared against the Frame response object.
+A *Frame* provides the means for demonstrating how an API method should behave.
+Once a Frame request object is turned into a payload and sent, the returning
+payload is then compared against the Frame response object.
 
 <a name="frame"></a>
 
@@ -10,7 +12,9 @@ A *Frame* provides the means for demonstrating how an API method should behave. 
 * must contain the *protocol*, *request*, and *response* objects.
 * can optionally hold a *Cut Instruction Set*.
 
-A Frame must provide a string value for the `"protocol"` key indicating the type of communication protocol used to ferry the payloads found in the payload bodies.
+A Frame must provide a string value for the `"protocol"` key indicating the
+type of communication protocol used to ferry the payloads found in the payload
+bodies.
 
 ## Frame nomenclature
 
@@ -44,9 +48,15 @@ A Frame must provide a string value for the `"protocol"` key indicating the type
 
 <a name="request"></a>
 
-`Request` - A [JSON object](https://en.wikipedia.org/wiki/JSON#Data_types_and_syntax) that fully defines how the *Frame* payload is built and sent.
-* A request's `"uri"` key must map to a string value specifying a fully formed [request URI](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1.2) for the protocol defined.
-* Must contain a *body* object even if no body data is to be sent. If no [cut `${VARIABLES}`](cut.md#cut-variable) are specified in the body then the payload will be sent as-is.
+`Request` - A [JSON
+object](https://en.wikipedia.org/wiki/JSON#Data_types_and_syntax) that fully
+defines how the *Frame* payload is built and sent.
+* A request's `"uri"` key must map to a string value specifying a fully formed
+[request URI](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.1.2)
+for the protocol defined.
+* Must contain a *body* object even if no body data is to be sent.
+If no [cut `${VARIABLES}`](cut.md#cut-variable) are specified in the body
+then the ayload will be sent as-is.
 
 <a name="listing-2"></a>
 
@@ -73,7 +83,8 @@ A Frame must provide a string value for the `"protocol"` key indicating the type
 
 <a name="response"></a>
 
-`Response` - A JSON object that defines the expectations for the contents of a response message.
+`Response` - A JSON object that defines the expectations for the contents of a
+response message.
 * The response key must map to a body and status field.
 * The response `"status"` key is intended to map to a protocol's status code.
 
@@ -95,11 +106,16 @@ A Frame must provide a string value for the `"protocol"` key indicating the type
 }
 ```
 
-**Listing 3:** A *Frame* file that expects an error message in the response body and a ["Not Found"](https://github.com/grpc/grpc/blob/master/doc/statuscodes.md) status code in the response status.
+**Listing 3:** A *Frame* file that expects an error message in the response
+body and a ["Not
+Found"](https://github.com/grpc/grpc/blob/master/doc/statuscodes.md) status
+code in the response status.
 
 <a name="cut-instruction-set"></a>
 
-`Cut Instruction Set` - A JSON object holding Read and Write instructions that push and pull variables `"from"` and `"to"` the *Cut Register* through [*Cut operations*](cut.md#cut-operation).
+`Cut Instruction Set` - A JSON object holding Read and Write instructions that
+push and pull variables `"from"` and `"to"` the *Cut Register* through [*Cut
+operations*](cut.md#cut-operation).
 
 * Must contain one or both of these key names: `"from"` and `"to"`.
 * The `"from"` key holds an array of `Read instructions`.
@@ -128,7 +144,8 @@ A Frame must provide a string value for the `"protocol"` key indicating the type
 }
 ```
 
-**Listing 4:** A *Frame* file containing one *Read instruction* in the *Cut Instruction Set*. <sub>[associated Cut Register](cut.md#listing-1)</sub>
+**Listing 4:** A *Frame* file containing one *Read instruction* in the *Cut
+Instruction Set*. <sub>[associated Cut Register](cut.md#listing-1)</sub>
 
 ## filmReel concepts:
 

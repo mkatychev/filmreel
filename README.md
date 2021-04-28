@@ -2,7 +2,10 @@
 
 A format for encoding API state flow expectations.
 
-The *filmReel* specification aims to move the source of truth for how an API should behave from the service itself and into a series of linear state diagrams. This allows one to set loosely coupled and human readable expectations for an API.
+The *filmReel* specification aims to move the source of truth for how an API
+should behave from the service itself and into a series of linear state
+diagrams. This allows one to set loosely coupled and human readable
+expectations for an API.
 
 By having filmReel be the source of truth for how an API should behave one can:
 

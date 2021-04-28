@@ -2,7 +2,9 @@
 
 ## Representing state flow through file sequences
 
-A *Reel* ties together Frames into a linear state flow model. The successful execution of all [*Frames*](frame.md#frame) belonging to a Reel signifies the end of a complete object state transition.
+A *Reel* ties together Frames into a linear state flow model. The successful
+execution of all [*Frames*](frame.md#frame) belonging to a Reel signifies the
+end of a complete object state transition.
 
 <a name="reel"></a>
 `Reel` - the sum of all *Frame*s in a directory that share the same *Reel name*:
@@ -13,9 +15,12 @@ A *Reel* ties together Frames into a linear state flow model. The successful exe
 `Final Frame` - the last *Success Frame* of a *Reel* sequence:
 
 * Contains a return body holding the final desired state of a particular object.
-* A Reel's intent is tied to the existence of a Final Frame, in other words, the return body of the final Frame is the keystone of any Reel sequence.
+* A Reel's intent is tied to the existence of a Final Frame, in other words,
+the return body of the final Frame is the keystone of any Reel sequence.
 
-The directory shown below holds the Frames needed to create a fully populated "User" object starting with user creation and ending with a query that returns the expected "User":
+The directory shown below holds the Frames needed to create a fully populated
+"User" object starting with user creation and ending with a query that returns
+the expected "User":
 
 <a name="listing-1"></a>
 
@@ -34,7 +39,9 @@ user_reel
 └── usr.09s.getuser.fr.json
 ```
 
-**Listing 1:** An example *Reel* in the `user_reel` directory. The *Reel* sequence indicates the steps taken to eventually return a representation of a "User" object in the final state.
+**Listing 1:** An example *Reel* in the `user_reel` directory. The *Reel*
+sequence indicates the steps taken to eventually return a representation of a
+"User" object in the final state.
 
 ## Reel nomenclature
 <a name="listing-2"></a>
@@ -53,10 +60,14 @@ usr.01se.createuser.fr.json
 **Listing 2**: A breakdown of a *Frame*'s filename.
 
 <a name="sequence-number"></a>
-`Sequence number` - a number representing a particular step in an object's state transition:
+`Sequence number` - a number representing a particular step in an object's
+state transition:
 
-* The presence of a Frame does not necessarily allude to a state transition. Most `Error Frame`s, for example, do not modify state.
-* A sequence number must be a whole number unless there are multiple `Frame type`s associated with a particular sequence number, then the sequence number must be suffixed with a decimal value delimited by an underscore:
+* The presence of a Frame does not necessarily allude to a state transition.
+Most `Error Frame`s, for example, do not modify state.
+* A sequence number must be a whole number unless there are multiple `Frame type`s
+associated with a particular sequence number, then the sequence number must be
+suffixed with a decimal value delimited by an underscore:
 
 <a name="listing-3"></a>
 
@@ -68,7 +79,8 @@ usr.01se.createuser.fr.json
   ```
   **Listing 3**: A *sequence number* with more than one `Error Frame`.
 
-* `Whole sequence number` - the integer representation of a sequence number indicating an object state.
+* `Whole sequence number` - the integer representation of a sequence number
+indicating an object state.
 
 <a name="frame-type"></a>
 `Frame type` - defined by the return body of a *Frame*:
@@ -80,7 +92,9 @@ usr.01se.createuser.fr.json
       * represented by the letter `s`.
       * Typically indicates a state transition.
       * A sequence number should aim to be referenced by only one success Frame.
-   1. `Post Success Error Frame` aka `P.S. Error Frame` -  an *Error Frame* that must be preceded by a *Success Frame* sharing the same *whole sequence number*:
+   1. `Post Success Error Frame` aka `P.S. Error Frame` -  an *Error Frame*
+      that must be preceded by a
+      *Success Frame* sharing the same *whole sequence number*:
       * represented by the letters `se`.
 
 <a name="listing-4"></a>
@@ -99,7 +113,8 @@ usr.01se.createuser.fr.json
 * A Frame must belong to only one Reel.
 
 <a name="reel-prefix"></a>
-`Reel prefix` - the concatenation of a *Frame*'s *sequence number*, *Frame type*, and *Reel name*:
+`Reel prefix` - the concatenation of a *Frame*'s *sequence number*,
+*Frame type*, and *Reel name*:
 
 <a name="listing-5"></a>
 
@@ -114,10 +129,12 @@ usr.01se.createuser.fr.json
 * Fully represents a Frame's relative placement in a *Reel* sequence.
 
 <a name="method-name"></a>
-`Method name` - represents the particular RPC command or REST endpoint coinciding with a *Frame*'s [request method](frame.md#request).
+`Method name` - represents the particular RPC command or REST endpoint
+coinciding with a *Frame*'s [request method](frame.md#request).
 
 <a name="type-suffix"></a>
-`Type suffix` - a filename ending in `.fr.json` indicates said file is a *filmReel* template *Frame*.
+`Type suffix` - a filename ending in `.fr.json` indicates said file is a
+*filmReel* template *Frame*.
 
 
 ## filmReel concepts:

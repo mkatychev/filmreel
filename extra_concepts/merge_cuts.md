@@ -1,6 +1,7 @@
 ## Merge Cuts
 
-Merge cuts are used in `dark record` to create a cut object by successively overwriting cut files _left to right_ staring with the reel cut:
+Merge cuts are used in `dark record` to create a cut object by successively
+overwriting cut files _left to right_ staring with the reel cut:
 
 Given these three files:
 
