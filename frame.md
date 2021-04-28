@@ -21,7 +21,7 @@ A Frame must provide a string value for the `"protocol"` key indicating the type
   "protocol": "gRPC",                       // communication protocol
   "cut": {                                  // Cut Instruction Set
     "to": {
-      "USER_ID": ".response.body.response"  // Write instruction
+      "USER_ID": "'response'.'body'.'response'"  // Write instruction
     }
   },
   "request": {                              // request object

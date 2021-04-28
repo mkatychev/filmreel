@@ -26,7 +26,7 @@ By having filmReel be the source of truth for how an API should behave one can:
   "protocol": "gRPC",
   "cut": {
     "to": {
-      "USER_ID": ".response.body.message"
+      "USER_ID": "'response'.'body'.'message'"
     }
   },
   "request": {
