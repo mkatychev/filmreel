@@ -2,6 +2,7 @@
 
 * reels that  get initialized before the specified reel.
 * allow different flows to reuse the same preludes.
+* component reels will only run add their **success frames** to the prelude.
 
   ```
   create
