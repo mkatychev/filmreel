@@ -148,5 +148,5 @@ Instruction Set*. <sub>[associated Cut Register](cut.md#listing-1)</sub>
 ## filmReel concepts:
 
 * [The Frame](frame.md)
-* [The Reel](Reel.md)
+* [The Reel](reel.md)
 * [The Cut](cut.md)

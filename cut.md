@@ -15,7 +15,7 @@ using instructions held in a Frame's
 
 <a name="cut"></a>
 
-`Cut File` - a JSON file starting with a [*Reel name*](Reel.md#reel-name) and
+`Cut File` - a JSON file starting with a [*Reel name*](reel.md#reel-name) and
 ending with the suffix `.cut.json`.
 * Ex: For a Reel with a name of `product`, the associated Cut file will be named `product.cut.json`.
 * Holds a single *Cut Register* object.
@@ -183,5 +183,5 @@ return a *Frame Parse Error* if used in a filmReel implementation.
 ## filmReel concepts:
 
 * [The Frame](frame.md)
-* [The Reel](Reel.md)
+* [The Reel](reel.md)
 * [The Cut](cut.md)

@@ -140,5 +140,5 @@ coinciding with a *Frame*'s [request method](frame.md#request).
 ## filmReel concepts:
 
 * [The Frame](frame.md)
-* [The Reel](Reel.md)
+* [The Reel](reel.md)
 * [The Cut](cut.md)
