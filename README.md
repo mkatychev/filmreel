@@ -16,13 +16,13 @@ By having filmReel be the source of truth for how an API should behave one can:
 ## filmReel concepts:
 
 * [The Frame](frame.md) - the JSON file where input an output expectations are set
-* [The Reel](Reel.md)   - the file naming system tying Frames together
+* [The Reel](reel.md)   - the file naming system tying Frames together
 * [The Cut](cut.md)     - the data sharing system allowing one Frame to pass messages to the next Frame
 
 
 #### Example: <sub>[annotated](frame.md#listing-1)</sub>
 
-`usr.01s.createuser.fr.json` <sub>[naming a file](Reel.md#reel-nomenclature)</sub>
+`usr.01s.createuser.fr.json` <sub>[naming a file](reel.md#reel-nomenclature)</sub>
 
 ```json
 {
