@@ -15,7 +15,6 @@ requests:
     }
   },
   "request": {
-    "body": {},
     "uri": "GET /object",
     "attempts": {
       "times": 5,

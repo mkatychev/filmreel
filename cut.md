@@ -25,7 +25,7 @@ ending with the suffix `.cut.json`.
 `Cut Register` - The JSON object stored in the *Cut* file.
 * Is an [associative array](https://en.wikipedia.org/wiki/Associative_array)
 containing valid JSON objects.
-* Holds *Cut Variables* and their corresonding values stored in a series of
+* Holds *Cut Variables* and their corresponding values stored in a series of
 key/value pairs.
 
 <a name="listing-1"></a>
@@ -67,7 +67,6 @@ dollar sign: `\\$`.
     ]
   },
   "request": {
-    "body": {},
     "uri": "POST /logout/${USER_ID}"
   },
   "response": {
@@ -109,11 +108,9 @@ traversal.
 {
   "protocol": "HTTP",
   "request": {
-    "body": {},
     "uri": "POST /logout/\\${USER_ID}"
   },
   "response": {
-    "body": {},
     "status": 200
   }
 }

@@ -55,7 +55,7 @@ defines how the *Frame* payload is built and sent.
 for the protocol defined.
 * Must contain a *body* object even if no body data is to be sent.
 If no [cut `${VARIABLES}`](cut.md#cut-variable) are specified in the body
-then the ayload will be sent as-is.
+then the payload will be sent as-is.
 
 <a name="listing-2"></a>
 

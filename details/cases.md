@@ -33,7 +33,6 @@
     "header": {
       "Authorization": "${USER_TOKEN}"
     },
-    "body": {},
     "uri": "POST /logout/${USER_ID}"
   },
   "response": {

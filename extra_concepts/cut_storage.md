@@ -12,7 +12,6 @@ A *Cut Variable* can store any valid JSON object:
     }
   },
   "request": {
-    "body": {},
     "uri": "GET /complex_object"
   },
   "response": {
