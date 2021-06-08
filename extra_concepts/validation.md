@@ -33,7 +33,7 @@ the actual and expected response.
 
 
 **Listing 1:** The Frame file above will remove any keys that are not
-`"response"` from the response payload.
+`"desired_response"` from the response payload.
 
 A partial comparison validator is meant to express: "I don't care about anything
 extra except what I've specified in the Frame file".
