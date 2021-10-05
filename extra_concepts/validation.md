@@ -66,7 +66,7 @@ the actual and expected response.
     "validation": { 
       // unordered validation will be applied to the elements of the response body
       "response.body": {
-        "partial": true
+        "unordered": true
       }
     },
     "body": {
@@ -84,3 +84,42 @@ actual response.
 
 A partial comparison validator is meant to express: "I don't care about anything
 extra except what I've specified in the Frame file".
+
+
+## Unordered and Partial Comparison
+
+Unordered and partial can also be applied at the same time to the same
+selection.  This allows a validation that ignores the order and any additional
+elements in the selection so long as the desired elements are present.
+
+```jsonc
+{
+  "protocol": "HTTP",
+  "request": {
+    "entrypoint": "http://localhost:8080",
+    "uri": "GET /object"
+  },
+  "response": {
+    "validation": { 
+      "response.body": {
+        "partial": true,
+        "unordered": true
+      }
+    },
+    "body": {
+      ["A", "B", "C"]
+      // For the array above all
+      // the elements below are valid matches:
+      //
+      // ["C", "B", "A", "A", "B", "C"]
+      // ["C", "B", "A", false]
+      // [["D"], "", "B", "C", "A"]
+    },
+    "status": 200
+  }
+}
+```
+
+**Listing 3:** The Frame file above will attempt, once per element given, to
+place any string elements of values `"A"`, `"B"` or `"C"` to the front of the
+actual response and remove additional elements from the match.
